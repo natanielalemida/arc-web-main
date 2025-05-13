@@ -54,7 +54,7 @@ export default function CourseDetails() {
   
     return (
         <BaseLayout>
-      <section className="relative px-6 py-16 md:px-12 lg:px-20 bg-[#05313E] min-h-screen w-full">
+      <section className="relative mt-10 px-6 py-16 md:px-12 lg:px-20 bg-[#05313E] min-h-screen w-full">
         <div className="relative z-20 max-w-7xl mx-auto">
           {/* Cabeçalho */}
           <div className="mb-12">
@@ -88,10 +88,6 @@ export default function CourseDetails() {
                   <div>Instrutor: {course.instructor}</div>
                 </div>
               </div>
-              
-              <button className="px-8 py-3 bg-[#98d2d3] text-[#05313E] font-bold rounded-lg hover:bg-white transition-colors duration-300 text-lg">
-                Inscreva-se agora
-              </button>
             </div>
           </div>
   
