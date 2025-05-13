@@ -49,7 +49,7 @@ export default function ArcAcademy() {
   
     return (
         <BaseLayout>
-      <section className="relative px-6 py-16 md:px-12 lg:px-20 bg-[#05313E] min-h-screen w-full">
+      <section className="relative mt-10 px-6 py-16 md:px-12 lg:px-20 bg-[#05313E] min-h-screen w-full">
         <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-white space-y-6 text-center mb-16">
             <p className="text-xl sm:text-2xl font-medium text-[#98d2d3] roboto">
@@ -76,8 +76,8 @@ export default function ArcAcademy() {
                   {course.category}
                 </span>
                 <h3 className="text-2xl font-bold text-white mb-3">{course.title}</h3>
-                <p className="text-[#98d2d3]">{course.description}</p>
-                <Link to='/academy/details' className="mt-6 px-6 py-2 bg-[#98d2d3] text-[#05313E] font-bold rounded-lg hover:bg-white transition-colors duration-300">
+                <p className="text-[#98d2d3] mb-5">{course.description}</p>
+                <Link to='/academy/details' className="px-6 py-2 bg-[#98d2d3] text-[#05313E] font-bold rounded-lg hover:bg-white transition-colors duration-300">
                   Saiba mais
                 </Link>
               </div>
