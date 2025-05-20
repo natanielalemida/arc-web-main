@@ -114,11 +114,13 @@ export default function BaseLayoutPlus({ children }: BaseLayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
             <img src={iconKronosApp} alt="Logo ARC" className="h-8 w-8" />
             <span className="text-lg sm:text-xl font-bold">
               <span className="text-white">ARC</span>{" "}
               <span className="font-normal text-gray-300">SOLUTION</span>
             </span>
+            </a>
           </div>
 
           {/* Navegação - Mobile Menu Button */}
