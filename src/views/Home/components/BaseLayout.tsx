@@ -85,42 +85,51 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
     <div className="min-h-screen bg-white">
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full bg-[#022D3D] text-white py-4 shadow z-50">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src={iconKronosApp} alt="Logo ARC" className="h-8 w-8" />
-            <span className="text-xl font-bold">
+            <span className="text-lg sm:text-xl font-bold">
               <span className="text-white">ARC</span>{" "}
               <span className="font-normal text-gray-300">SOLUTION</span>
             </span>
           </div>
 
-          {/* Navegação */}
-          <nav className="hidden md:flex space-x-10 text-gray-200">
+          {/* Navegação - Mobile Menu Button */}
+          <div className="md:hidden">
+            <button className="text-white focus:outline-none">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Navegação - Desktop */}
+          <nav className="hidden md:flex space-x-6 lg:space-x-10 text-gray-200">
             <a href="#home" className="hover:text-white">Home</a>
             <a href="#solucoes" className="hover:text-white">Soluções</a>
             <a href="#contato" className="hover:text-white">Contato</a>
           </nav>
 
           {/* Botões */}
-          <div className="flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
             <a
-               href="https://wa.me/559491820370?text=Ol%C3%A1!%20%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20sistemas%20da%20ARC%20Solution.%20Poderiam%20me%20ajudar,%20por%20favor?"
-               target="_blank"
-               className="bg-[#C9F1ED] text-[#007A74] font-medium px-4 py-2 rounded-md hover:opacity-90 transition"
+              href="https://wa.me/559491820370?text=Ol%C3%A1!%20%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20sistemas%20da%20ARC%20Solution.%20Poderiam%20me%20ajudar,%20por%20favor?"
+              target="_blank"
+              className="bg-[#C9F1ED] text-[#007A74] font-medium px-3 py-1.5 lg:px-4 lg:py-2 rounded-md hover:opacity-90 transition text-sm lg:text-base"
             >
               Comece agora
             </a>
             <a
               href="#download"
-              className="border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-[#022D3D] transition"
+              className="border border-white text-white px-3 py-1.5 lg:px-4 lg:py-2 rounded-md hover:bg-white hover:text-[#022D3D] transition text-sm lg:text-base"
             >
               Download
             </a>
             <Link
               to="/academy"
-               target="_blank"
-              className="bg-white text-[#022D3D] font-medium px-4 py-2 rounded-md hover:bg-gray-100 transition"
+              target="_blank"
+              className="bg-white text-[#022D3D] font-medium px-3 py-1.5 lg:px-4 lg:py-2 rounded-md hover:bg-gray-100 transition text-sm lg:text-base"
             >
               ARC Academy
             </Link>
@@ -129,22 +138,22 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
       </header>
 
       {/* CONTEÚDO */}
-      <main>{children}</main>
+      <main className="pt-16">{children}</main>
 
       {/* Botão do ChatBot */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         {!isChatOpen ? (
           <button 
             onClick={() => setIsChatOpen(true)}
-            className="bg-[#007A74] text-white p-4 rounded-full shadow-lg hover:bg-[#005f5a] transition flex items-center justify-center"
-            style={{ width: '60px', height: '60px' }}
+            className="bg-[#007A74] text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-[#005f5a] transition flex items-center justify-center"
+            style={{ width: '56px', height: '56px' }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
           </button>
         ) : (
-          <div className="bg-white rounded-lg shadow-xl w-80 flex flex-col" style={{ height: '500px' }}>
+          <div className="bg-white rounded-lg shadow-xl w-full sm:w-80 flex flex-col" style={{ height: 'calc(100vh - 120px)', maxHeight: '500px' }}>
             {/* Cabeçalho do Chat */}
             <div className="bg-[#022D3D] text-white p-4 rounded-t-lg flex justify-between items-center">
               <h3 className="text-lg font-semibold">Suporte ARC</h3>
@@ -168,7 +177,7 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
                     className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div 
-                      className={`max-w-xs rounded-lg px-4 py-2 ${msg.role === "user" ? "bg-[#007A74] text-white" : "bg-gray-200 text-gray-800"}`}
+                      className={`max-w-[80%] sm:max-w-xs rounded-lg px-4 py-2 ${msg.role === "user" ? "bg-[#007A74] text-white" : "bg-gray-200 text-gray-800"}`}
                     >
                       <div className="text-xs font-semibold mb-1">
                         {msg.sender}
@@ -208,13 +217,13 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                   placeholder="Digite sua mensagem..."
-                  className="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#007A74]"
+                  className="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#007A74] text-sm sm:text-base"
                   disabled={isLoading}
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={isLoading || !message.trim()}
-                  className="bg-[#007A74] text-white px-4 py-2 rounded-md hover:bg-[#005f5a] disabled:opacity-50"
+                  className="bg-[#007A74] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-md hover:bg-[#005f5a] disabled:opacity-50 text-sm sm:text-base"
                 >
                   Enviar
                 </button>
