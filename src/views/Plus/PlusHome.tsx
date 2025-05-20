@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import BaseLayout from "../Home/components/BaseLayout";
+import BaseLayoutPlus from "../Home/components/BaseLayoutPlus";
 import IntegrationPOS from "../Home/components/IntegrationPOS";
 import KronosApp from "../Home/components/KronoApp";
 import KronosFood from "../Home/components/KronosFood";
@@ -8,24 +8,24 @@ import SecondaryHeader from "../Home/components/SecodaryHeader";
 
 export default function PlusHome() {
  return(
-  <BaseLayout>
+  <BaseLayoutPlus>
   <Layout>
-  <div id="secondary-header">
+  <div id="home">
       <SecondaryHeader />
   </div>
-  <div>
+  <div id="kronosapp">
       <KronosApp />
   </div>
-  <div>
+  <div id="kronosfood">
     <KronosFood />
   </div>
-  <div>
+  <div id="kronosvendas">
     <KronosVendas />
   </div>
-  <div>
+  <div id="integracao">
     <IntegrationPOS />
   </div>
 </Layout>
-  </BaseLayout>
+  </BaseLayoutPlus>
   )
 }
