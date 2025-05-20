@@ -19,7 +19,7 @@ const formatMessage = (text: string) => {
   return { __html: formattedText };
 };
 
-export default function BaseLayout({ children }: BaseLayoutProps) {
+export default function BaseLayoutAcademy({ children }: BaseLayoutProps) {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [conversation, setConversation] = useState<Array<{role: string, content: string, sender: string}>>([
@@ -88,42 +88,31 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
             <img src={iconKronosApp} alt="Logo ARC" className="h-8 w-8" />
             <span className="text-xl font-bold">
               <span className="text-white">ARC</span>{" "}
               <span className="font-normal text-gray-300">SOLUTION</span>
             </span>
+            </a>
           </div>
 
           {/* Navegação */}
-          <nav className="hidden md:flex space-x-10 text-gray-200">
+          {/* <nav className="hidden md:flex space-x-10 text-gray-200">
             <a href="#home" className="hover:text-white">Home</a>
             <a href="#solucoes" className="hover:text-white">Soluções</a>
             <a href="#contato" className="hover:text-white">Contato</a>
-          </nav>
+          </nav> */}
 
           {/* Botões */}
           <div className="flex items-center space-x-3">
-            <a
-               href="https://wa.me/559491820370?text=Ol%C3%A1!%20%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20sistemas%20da%20ARC%20Solution.%20Poderiam%20me%20ajudar,%20por%20favor?"
-               target="_blank"
-               className="bg-[#C9F1ED] text-[#007A74] font-medium px-4 py-2 rounded-md hover:opacity-90 transition"
-            >
-              Comece agora
-            </a>
+
             <a
               href="#download"
               className="border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-[#022D3D] transition"
             >
               Download
             </a>
-            <Link
-              to="/academy"
-               target="_blank"
-              className="bg-white text-[#022D3D] font-medium px-4 py-2 rounded-md hover:bg-gray-100 transition"
-            >
-              ARC Academy
-            </Link>
           </div>
         </div>
       </header>

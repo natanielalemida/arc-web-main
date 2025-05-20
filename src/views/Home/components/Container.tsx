@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function AboutSolution() {
   return (
-    <div className="flex justify-center items-center mt-10 px-4">
+    <div id="solucoes" className="flex justify-center items-center mt-10 px-4">
       <div className="p-4 md:p-6 lg:p-10 rounded-2xl w-full max-w-6xl">
         <h1 className="roboto text-[#009172] text-xl md:text-2xl mb-4 text-center">
           SUPORTE SUPER RÁPIDO PARA SUA EMPRESA{" "}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import BaseLayout from "../Home/components/BaseLayout";
+import BaseLayoutAcademy from "../Home/components/BaseLayoutAcademy";
 
 export default function ArcAcademy() {
     const courses = [
@@ -48,7 +49,7 @@ export default function ArcAcademy() {
     ];
   
     return (
-        <BaseLayout>
+        <BaseLayoutAcademy>
       <section className="relative mt-10 px-6 py-16 md:px-12 lg:px-20 bg-[#05313E] min-h-screen w-full">
         <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-white space-y-6 text-center mb-16">
@@ -85,6 +86,6 @@ export default function ArcAcademy() {
           </div>
         </div>
       </section>
-      </BaseLayout>
+      </BaseLayoutAcademy>
     );
   }
