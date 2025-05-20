@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import iconKronosApp from "../../../assets/logoNavbar.png";
-import { Link } from "react-router-dom";
 
 type BaseLayoutProps = {
   children: ReactNode;

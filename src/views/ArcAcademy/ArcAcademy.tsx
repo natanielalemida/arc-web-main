@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import BaseLayout from "../Home/components/BaseLayout";
 import BaseLayoutAcademy from "../Home/components/BaseLayoutAcademy";
 
 export default function ArcAcademy() {

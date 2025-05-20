@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import kronos from "../../../assets/kronos.png";
 import GooglePlay from "../../../assets/google-play.png";
 import AppStore from "../../../assets/app-store.png";
