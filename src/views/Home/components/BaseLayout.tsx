@@ -44,10 +44,10 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
       // Simulação da chamada à API com contexto específico
       const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer sk-7c41ccea5999485e858d6f09062dbd64"
-        },
+headers: {
+  "Content-Type": "application/json",
+  "Authorization": `Bearer ${import.meta.env.VITE_DEEPSEEK_API_KEY}`
+},
         body: JSON.stringify({
           model: "deepseek-chat",
           messages: [
