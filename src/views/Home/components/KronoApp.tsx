@@ -62,14 +62,14 @@ export default function KronosApp() {
 
           {/* Botões de download */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 pt-2">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/dev?id=5009452207881482349" target="_blank">
               <img
                 src={GooglePlay}
                 alt="Disponível no Google Play"
                 className="h-10 sm:h-12 md:h-14 rounded-md shadow-md hover:scale-105 transition-transform"
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/dev?id=5009452207881482349" target="_blank">
               <img
                 src={AppStore}
                 alt="Disponível na App Store"

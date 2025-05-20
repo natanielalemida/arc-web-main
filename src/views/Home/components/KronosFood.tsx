@@ -50,7 +50,7 @@ export default function KronosFood() {
 
           {/* Botões de download */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 pt-2">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/dev?id=5009452207881482349" target="_blank">
               <motion.img
                 src={GooglePlayDark}
                 alt="Disponível no Google Play"
@@ -59,7 +59,7 @@ export default function KronosFood() {
                 transition={{ duration: 0.2 }}
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://apps.apple.com/br/app/kronos-app/id6670283926?l=en-GB" target="_blank">
               <motion.img
                 src={AppStoreDark}
                 alt="Disponível na App Store"

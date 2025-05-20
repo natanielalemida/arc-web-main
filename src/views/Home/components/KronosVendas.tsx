@@ -55,14 +55,14 @@ export default function KronosVendas() {
 
           {/* Botões de download */}
           <div className="flex items-center gap-4 pt-4 justify-center md:justify-start p-3">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/dev?id=5009452207881482349" target="_blank">
               <img
                 src={GooglePlayDark}
                 alt="Disponível no Google Play"
                 className="h-12 sm:h-14 rounded-md shadow-md"
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://apps.apple.com/br/app/kronos-app/id6670283926?l=en-GB" target="_blank">
               <img
                 src={AppStoreDark}
                 alt="Disponível na App Store"
